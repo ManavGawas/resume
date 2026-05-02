@@ -1,0 +1,146 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[left=0.5in, right=0.5in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Custom Professional Color Palette
+\definecolor{DeepBlue}{RGB}{0, 32, 96}
+\definecolor{SlateGrey}{RGB}{47, 79, 79}
+\definecolor{MatteBlack}{RGB}{30, 30, 30}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Formatting Setup
+\titleformat{\section}{\large\bfseries\color{DeepBlue}\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0.6ex}{0.6ex} 
+
+\newcommand{\resumeItem}[1]{\item\small{\color{MatteBlack}#1}}
+
+% Custom command for Work Experience & Education
+\newcommand{\resumeSubheading}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \color{SlateGrey}#2 \\
+      \textit{\small#3} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% Custom command for Projects
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \color{SlateGrey}#2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand{\familydefault}{\sfdefault} % Modern sans-serif font
+
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+    {\Huge \textbf{\color{DeepBlue}Manav Gawas}} \\ \vspace{6pt}
+    \small \href{mailto:gawasmanav469@gmail.com}{\color{DeepBlue}gawasmanav469@gmail.com} $|$ \href{https://www.linkedin.com/in/manavgawas/}{\color{DeepBlue}LinkedIn/manavgawas} $|$ \href{https://github.com/ManavGawas}{\color{DeepBlue}github.com/ManavGawas}
+\end{center}
+\vspace{2pt}
+
+% ---------- TECHNICAL SKILLS ----------
+\section{Skills \& Competencies}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt, parsep=0pt]
+    \small{\item{
+     \textbf{Frontend}{: React.js, Tailwind CSS} \\
+     \textbf{Backend \& Programming}{: Node.js, Express.js, API Development, Python, Data Structures \& Algorithms} \\
+     \textbf{ML \& Analysis}{: Machine Learning, Data \& Business Analysis} \\
+     \textbf{Databases}{: MongoDB, MySQL, Supabase, SQLite} \\
+     \textbf{Tools \& DevOps}{: AWS, Docker, GitHub, Linux, n8n, Socket.IO} \\
+     \textbf{Mobile}{: Flutter} \\
+     \textbf{Business \& Strategy}{: RevOps Architecture, SOW Drafting, Scope Management, B2B Automation Strategy}
+    }}
+ \end{itemize}
+
+% ---------- ENTREPRENEURIAL \& WEB PROJECTS ----------
+\section{Entrepreneurial \& Web Projects}
+    \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt]
+      \resumeProjectHeading
+          {\textbf{Syncora Systems} $|$ \emph{Node.js, OpenAI, Vapi, Deepgram} $|$ \href{https://syncora.systems}{\color{DeepBlue}syncora.systems}}{2026 -- Present}
+          \begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=1pt, parsep=0pt]
+            \resumeItem{Architecting a comprehensive AI and Revenue Operations (RevOps) platform specializing in autonomous voice intelligence for B2B workflows.}
+            \resumeItem{Engineered low-latency ($<$300ms) AI voice agents for lead qualification and scheduling, designed to eliminate operational bottlenecks and optimize client resource allocation.}
+            \resumeItem{Developed scalable business infrastructure, including automated natural language date parsing, Cal.com integration, and comprehensive deployment Statements of Work (SOWs).}
+          \end{itemize}
+          \vspace{3pt} 
+
+      \resumeProjectHeading
+          {\textbf{ImpactLoop (Volunteer Platform)} $|$ \emph{Next.js, TypeScript, Supabase}}{2025}
+          \begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=1pt, parsep=0pt]
+            \resumeItem{Built a two-sided coordination platform featuring an NGO management dashboard, shift tracking, geofencing check-ins, and automated certificate generation.}
+          \end{itemize}
+          \vspace{3pt}
+          
+      \resumeProjectHeading
+          {\textbf{GymMate (Fitness Tracking App)} $|$ \emph{Flutter, Firebase}}{2025}
+          \begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=1pt, parsep=0pt]
+            \resumeItem{Built cross-platform application with workout tracking, calendar planning, dynamic charts, TTS/video guidance, and location tracking for activity monitoring.}
+          \end{itemize}
+    \end{itemize}
+
+% ---------- HACKATHONS \& RESEARCH ----------
+\section{Hackathons \& Research}
+    \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt]
+      \resumeProjectHeading
+          {\textbf{DWLR System Solution (Smart India Hackathon)} $|$ \emph{React, Node.js, Socket.IO, Python ML}}{2025}
+          \begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=1pt, parsep=0pt]
+            \resumeItem{Built a real-time groundwater monitoring dashboard simulating IoT data via low-latency Socket.IO pipelines, featuring live streaming, ML forecasting, and rapid-decline alerts.}
+          \end{itemize}
+          \vspace{3pt}
+          
+      \resumeProjectHeading
+          {\textbf{Cybersecurity Risk Classification Model} $|$ \emph{Python, Scikit-Learn, Pandas, SMOTE}}{2024}
+          \begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=1pt, parsep=0pt]
+            \resumeItem{Built and tuned Support Vector Machine (SVM), Random Forests, and K-NN models to classify user cybersecurity risk levels on a custom dataset, achieving $\sim$94\% accuracy and 100\% high-risk recall.}
+          \end{itemize}
+    \end{itemize}
+
+% ---------- WORK EXPERIENCE ----------
+\section{Work Experience}
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt]
+    \resumeSubheading
+      {Web Developer Intern}{Jan 2026 -- Feb 2026}
+      {Viva Computech $|$ \href{https://viva-computech.onrender.com}{\color{DeepBlue}viva-computech.onrender.com}}
+      \begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=1pt, parsep=0pt]
+        \resumeItem{Spearheaded the 0-to-1 development of the company's first full-stack business portal, establishing their digital presence and automating client acquisition channels.}
+        \resumeItem{Built and deployed scalable RESTful APIs using Express.js and MongoDB to automate the capture, validation, and storage of customer inquiries, eliminating manual data entry.}
+        \resumeItem{Ensured 100\% responsive UI/UX across all devices and successfully managed the production deployment on Render, maintaining optimized load times and high availability.}
+      \end{itemize}
+  \end{itemize}
+
+% ---------- EDUCATION ----------
+\section{Education}
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt]
+    \resumeSubheading
+      {SVKM's Mithibai College}{2023 -- 2026}
+      {Bachelor of Science -- Computer Science}
+      \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt]
+        \vspace{2pt}
+        \small{\item{\color{MatteBlack}\textbf{Relevant Coursework:} Data Structures, Algorithms, Cloud Computing, Artificial Intelligence}}
+      \end{itemize}
+      \vspace{2pt}
+      
+    \resumeSubheading
+      {SVKM's Mithibai College}{2021 -- 2023}
+      {HSC Bifocal -- Computer Science}
+  \end{itemize}
+
+% ---------- ACHIEVEMENTS ----------
+\section{Achievements}
+  \begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=1pt, parsep=0pt]
+    \resumeItem{\textbf{State Level Athlete (2018):} Secured 3rd place in State-Level Competition in Hurdles (Satara) and 3rd place in 4x100m Relay (Chhatrapati Sambhaji Nagar).}
+    \resumeItem{\textbf{District Level Athlete (2015 -- 2019):} Secured 1st place in District-Level Competitions for 3 continuous years.}
+  \end{itemize}
+
+\end{document}

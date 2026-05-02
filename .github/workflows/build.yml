@@ -1,0 +1,31 @@
+name: Compile and Release Resume
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build_resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+
+      - name: Create Rolling Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "resume.pdf"
+          tag: "latest"
+          name: "Latest Resume"
+          body: "Automated LaTeX compilation of my most up-to-date resume."
+          allowUpdates: true
+          makeLatest: true
+          token: ${{ secrets.GITHUB_TOKEN }}
